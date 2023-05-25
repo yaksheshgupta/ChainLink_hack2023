@@ -7,6 +7,7 @@ interface ERC20{
 }
 
 contract test {
+
   VRFv2DirectFundingConsumer contra;
   address linktoken=0x326C977E6efc84E512bB9C30f76E30c160eD06FB;
   ERC20 token;
@@ -15,6 +16,7 @@ contract test {
     contra = new VRFv2DirectFundingConsumer();
     token = ERC20(linktoken);
   }
+
 
   function transferLink() public returns(bool){
     return token.transfer(address(contra),1);
